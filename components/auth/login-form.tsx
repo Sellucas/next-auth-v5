@@ -64,7 +64,7 @@ export const LoginForm = () => {
             setShowTwoFactor(true);
           }
         })
-        .catch((error) => {
+        .catch(() => {
           setError("Something went wrong!");
         });
     });
@@ -111,7 +111,7 @@ export const LoginForm = () => {
                         <Input
                           {...field}
                           disabled={isPending}
-                          placeholder="daniel.doe@example.com"
+                          placeholder="john.doe@example.com"
                           type="email"
                         />
                       </FormControl>
@@ -134,8 +134,8 @@ export const LoginForm = () => {
                         />
                       </FormControl>
                       <Button
-                        size={"sm"}
-                        variant={"link"}
+                        size="sm"
+                        variant="link"
                         asChild
                         className="px-0 font-normal"
                       >
