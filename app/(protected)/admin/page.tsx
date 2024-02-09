@@ -11,7 +11,13 @@ import { Card, CardContent, CardHeader } from "@/components/ui/card";
 
 const AdminPage = () => {
   const onServerActionClick = () => {
-    admin();
+    admin().then((response) => {
+      if (response.success) {
+        toast.success(response.success);
+      } else {
+        toast.error(response.error);
+      }
+    });
   };
 
   const onApiRouteClick = () => {
@@ -40,7 +46,7 @@ const AdminPage = () => {
         </div>
         <div className="flex flex-row items-center justify-between rounded-lg border p-3 shadow-md">
           <p className="text-sm font-medium">Admin-only Server Action</p>
-          <Button>Click to test</Button>
+          <Button onClick={onServerActionClick}>Click to test</Button>
         </div>
       </CardContent>
     </Card>
