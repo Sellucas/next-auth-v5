@@ -6,9 +6,11 @@ interface ProtectLayoutProps {
 
 const ProtectLayout = ({ children }: ProtectLayoutProps) => {
   return (
-    <div className="h-full w-full flex flex-col gap-y-10 items-center justify-center bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-sky-400 to-blue-800">
-        <Navbar />
-      {children}
+    <div className="h-full hero w-full bg-[#1e40af]">
+      <div className="flex h-full flex-col items-center justify-center radial absolute w-full z-10 gap-y-10">
+          <Navbar />
+        {children}
+      </div>
     </div>
   );
 };
