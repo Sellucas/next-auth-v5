@@ -33,7 +33,7 @@ export const {
       if (account?.provider !== "credentials") return true;
 
       // Prevent sign in whitout email verification
-      const existingUser = await getUserById(user.id);
+      const existingUser = await getUserById(user.id as string);
 
       if (!existingUser?.emailVerified) return false;
 

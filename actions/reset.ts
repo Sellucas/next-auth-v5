@@ -10,8 +10,8 @@ import { generatePasswordResetToken } from "@/lib/tokens";
 export const reset = async (values: z.infer<typeof ResetSchema>) => {
   const validatedFields = ResetSchema.safeParse(values);
 
-  if (!validatedFields) {
-    return { error: "Invalid email!" };
+  if (!validatedFields.success) {
+    return { error: "Invalid emaiL!" };
   }
 
   const { email } = validatedFields.data;
