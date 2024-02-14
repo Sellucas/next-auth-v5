@@ -1,6 +1,6 @@
 # Next Auth v5 - User Authentication
 
-![NextAuth]()
+![next-auth-v5](https://github.com/Sellucas/next-auth-v5/assets/75432770/9d8cd5ab-c70f-461a-af6b-59fba58b97d4)
 
 ## About
 
